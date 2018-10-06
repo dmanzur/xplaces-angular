@@ -1,0 +1,21 @@
+<header>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" routerLinkActive="active" routerLink="/home/places"> Places </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLinkActive="active" routerLink="/home/users"> Users </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLinkActive="active" routerLink="/home/statistics"> Statistics </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-danger" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+</header>
+<br>
+<hr id="divider">
+<br>
+<router-outlet></router-outlet>
+

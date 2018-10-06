@@ -1,0 +1,10 @@
+header {
+  text-align: center;
+}
+
+.doughnutChart {
+  display: block;
+}
+* {
+  height: 100%;
+}

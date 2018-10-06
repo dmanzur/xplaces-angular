@@ -1,0 +1,16 @@
+<article>
+  <h1>Xplaces</h1>
+  <hr>
+  <div class="container-fluid">
+    <div>
+      <div class="form-group">
+        <label for="log-email">Email</label>
+        <input #email id="log-email"  type="text" class="form-control">
+        <br>
+        <label for="log-password">Password</label>
+        <input #password id="log-password" type="password" class="form-control">
+      </div>
+      <button class="btn btn-primary" (click)="signUser(email.value,password.value)">Submit</button>
+    </div>
+  </div>
+</article>

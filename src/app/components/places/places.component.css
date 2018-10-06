@@ -1,0 +1,52 @@
+header {
+  text-align: center;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+}
+
+#search {
+  width: 50%;
+}
+
+#searchArea {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+}
+
+#placeArea {
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+}
+
+#placesIdsArea {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+}
+
+.deleteBtn {
+  margin-left: 20px;
+}
+
+
+#cardImg {
+  height: 480px;
+}
+
+
+
+
+
+

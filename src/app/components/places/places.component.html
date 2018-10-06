@@ -1,0 +1,65 @@
+<header>
+  <h2>
+    Explore places
+  </h2>
+</header>
+<br>
+<article>
+  <section id="searchArea">
+    <div class="container">
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <input type="text" placeholder="search for location" class="form-control" #googleSearchArea>
+          <button class="btn btn-primary" type="button" (click)="onGoogleSearchBtnClick()">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="placeArea">
+    <div *ngIf=place class="card" >
+      <img id="cardImg" class="card-img-top" src={{place.imagesUrl[0]}} alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title">{{place.name}}</h3>
+        <h5 class="card-title">{{place.country}}</h5>
+        <p class="card-text">{{place.description}}</p>
+      </div>
+      <div class="card-footer">
+        <h6>Place id: {{place.placeId}}</h6>
+        <button type="button" class="btn btn-primary" (click)="addPlaceIdToPlacesList()">
+          Add
+        </button>
+      </div>
+    </div>
+  </section>
+  <br>
+  <hr>
+  <br>
+  <section  id="placesIdsArea">
+    <h2 >Places Ids List</h2>
+    <br>
+    <br>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Place id</th>
+        <th scope="col">Place name</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let placeId of placesIdsList; let index = index">
+      <tr >
+        <th scope="row">{{index+1}}</th>
+        <td>{{placeId.placeId}}</td>
+        <td>{{placeId.name}}</td>
+        <td>
+          <button type="button" class="btn btn-danger deleteBtn" (click)="deletePlaceIdFromPlacesList(placeId.placeId)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

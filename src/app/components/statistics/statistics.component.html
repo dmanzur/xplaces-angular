@@ -1,0 +1,16 @@
+<header>
+  <h2>
+  Top Favorites places
+  </h2>
+</header>
+<br>
+<article>
+  <section>
+    <div class="doughnutChart" *ngIf="doughnutChartMap">
+      <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"></canvas>
+    </div>
+  </section>
+</article>
